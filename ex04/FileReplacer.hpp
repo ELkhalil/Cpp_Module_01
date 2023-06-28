@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FileReplacer.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/28 11:55:21 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/28 12:38:59 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/06/28 11:52:36 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/06/28 12:46:15 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FileReplacer.hpp"
+#ifndef FILEREPLACER_HPP
+#define FILEREPLACER_HPP
 
-int main(int argc, char **av) {
+#include <iostream>
+#include <string>
+
+class FileReplacer {
+private:
+    std::string _filename;
+    std::string _s1;
+    std::string _s2;
     
-    if (argc != 4) 
-    {
-        std::cerr << "Invalid Arguments" << std::endl;
-        return 1;
-    }
-    FileReplacer fileReplacer(av[1], av[2], av[3]);
-    fileReplacer.replaceOccurrences();
-    return 0;
-}
+    void _replace(std::string& line);
+public:
+    FileReplacer(const std::string& filename, const std::string& s1, const std::string& s2);
+    bool replaceOccurrences();
+};
+
+#endif
