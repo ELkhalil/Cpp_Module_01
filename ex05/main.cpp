@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 17:04:05 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/28 14:19:57 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/06/28 14:28:58 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/06/28 14:42:31 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#include "Harl.hpp"
 
-#include <iostream>
-#include <string>
-
-class Harl
+int main()
 {
-    private:
-        void    debug( void );
-        void    info( void );
-        void    warning( void );
-        void    error( void );
-    public:
-        void    complain( std::string level );
-};
-typedef void(Harl::* func_ptr)();
-
-#endif
+    Harl    instance;
+    instance.complain("DEBUG");
+    instance.complain("INFO");
+    instance.complain("WARNING");
+    instance.complain("ERROR");
+    return 0;
+}
