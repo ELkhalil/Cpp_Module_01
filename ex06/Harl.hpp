@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 17:04:05 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/28 14:19:57 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/06/28 15:17:44 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ class Harl
     public:
         void    complain( std::string level );
 };
-typedef void(Harl::* func_ptr)();
 
 #endif
