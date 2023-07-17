@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/28 12:57:12 by aelkhali          #+#    #+#              #
-#    Updated: 2023/06/28 15:06:35 by aelkhali         ###   ########.fr        #
+#    Created: 2023/07/11 14:09:32 by aelkhali          #+#    #+#              #
+#    Updated: 2023/07/16 16:15:24 by aelkhali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Output Program Name
-NAME = harlFilter
+NAME = Harl_filter
 
 # Colors :
 GREEN = \033[0;32m

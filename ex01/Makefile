@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/28 12:57:12 by aelkhali          #+#    #+#              #
-#    Updated: 2023/06/20 12:09:06 by aelkhali         ###   ########.fr        #
+#    Created: 2023/07/11 14:09:32 by aelkhali          #+#    #+#              #
+#    Updated: 2023/07/13 13:49:25 by aelkhali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Output Program Name
-NAME = MoarBrainz
+NAME = moar_brainz
 
 # Colors :
 GREEN = \033[0;32m

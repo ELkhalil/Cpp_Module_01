@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 12:34:02 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/20 13:22:36 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/13 14:16:47 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/13 16:11:26 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,17 @@
 #define HUMANB_HPP
 
 #include "Weapon.hpp"
-#include <string>
+#include <iostream>
 
-class HumanB {
+class HumanB
+{
+public:
+    HumanB(std::string const& name);
+    void setWeapon(Weapon& weapon);
+    void attack( void );
 private:
     std::string name;
     Weapon* weapon;
-
-public:
-    HumanB(const std::string& name);
-    ~HumanB();
-    void setWeapon(Weapon& weapon);
-    void attack() const;
 };
 
 #endif

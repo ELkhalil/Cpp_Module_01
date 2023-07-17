@@ -5,25 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 12:33:38 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/20 13:23:01 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/13 14:16:19 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/13 18:20:50 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANA_HPP
 #define HUMANA_HPP
 
+#include <iostream>
 #include "Weapon.hpp"
 
 class HumanA
 {
-private:
-    std::string _name;
-    Weapon      weapon;
 public:
-    HumanA(const std::string& name, const Weapon& weapon);
-    ~HumanA( void );
-    void attack() const;
+    HumanA( std::string name, Weapon& weapon);
+    ~HumanA ( void );
+    void attack( void );
+private:
+    std::string name;
+    Weapon&     weapon;
 };
 
 #endif

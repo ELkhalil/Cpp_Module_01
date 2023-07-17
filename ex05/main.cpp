@@ -5,19 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/28 14:28:58 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/28 14:42:31 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/15 15:09:21 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/16 19:41:02 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "Harl.hpp"
 
-int main()
+int main( void )
 {
-    Harl    instance;
-    instance.complain("DEBUG");
-    instance.complain("INFO");
-    instance.complain("WARNING");
-    instance.complain("ERROR");
+    std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+    Harl harl;
+
+    for (int i = 3; i > -1; i--)
+        harl.complain(levels[i]);
+    harl.complain("ing");
+    harl.complain("");
     return 0;
 }

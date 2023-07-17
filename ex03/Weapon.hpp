@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 12:33:11 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/20 13:08:45 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/13 14:15:53 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/13 18:19:23 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_H
-# define WEAPON_H
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-#include <string>
+#include <iostream>
 
 class Weapon
 {
-    private:
-       std::string _type;
-    public:
-        Weapon(const std::string& type);
-        ~Weapon();
-        const std::string& getType() const;
-        void  set_Type(const std::string &type);
+public:
+    Weapon(std::string const& type);
+    ~Weapon( void );
+    std::string const& getType( void ) const;
+    void    setType( std::string const& new_type );
+private:    
+    std::string type;
 };
 
 #endif

@@ -5,29 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 12:34:00 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/20 13:23:28 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/13 14:16:38 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/16 19:34:54 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
-#include <iostream>
 
-HumanB::HumanB(const std::string& name)
-    : name(name), weapon(nullptr) {}
+HumanB::HumanB(std::string const& name) : name(name), weapon(NULL) {}
 
-HumanB::~HumanB() {
-    // No need to delete weapon
-}
-
-void HumanB::setWeapon(Weapon& weapon) {
+void    HumanB::setWeapon(Weapon& weapon)
+{
     this->weapon = &weapon;
 }
 
-void HumanB::attack() const {
-    if (weapon != nullptr) {
-        std::cout << name << " attacks with their " << weapon->getType() << std::endl;
-    } else {
-        std::cout << name << " attacks with their bare hands" << std::endl;
-    }
+void    HumanB::attack( void )
+{
+    if (this->weapon)
+        std::cout << this->name << " attacks with their " << this->weapon->getType() <<std::endl;
+    else
+        std::cout << this->name << " attacks with his hands" << std::endl;
 }

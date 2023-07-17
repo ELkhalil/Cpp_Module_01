@@ -5,24 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/19 15:46:44 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/20 11:52:17 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/13 11:47:43 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/16 18:06:36 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(const std::string &name)
-    : _name(name)
-{}
+Zombie::Zombie( void ) {}
+
+Zombie::Zombie(std::string const& name) : _name(name) {}
 
 Zombie::~Zombie( void ) 
 {
-    std::cout << "Destroying zombie: " << _name << std::endl;
+    std::cout << this->_name << " Died" << std::endl;
 }
 
 void    Zombie::announce( void )
 {
-    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
-
